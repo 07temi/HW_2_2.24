@@ -28,12 +28,18 @@ class ViewController: UIViewController {
         
         redSlider.minimumValue = 0.1
         redSlider.maximumValue = 1.0
+        redSlider.value = 0.5
+        redSlider.tintColor = .red
         
         greenSlider.minimumValue = 0.1
         greenSlider.maximumValue = 1.0
+        greenSlider.value = 0.5
+        greenSlider.tintColor = .green
         
         blueSlider.minimumValue = 0.1
         blueSlider.maximumValue = 1.0
+        blueSlider.value = 0.5
+        blueSlider.tintColor = .blue
         
         redLabel.text = "Red:"
 //        redLabel.adjustsFontSizeToFitWidth = true
@@ -50,18 +56,13 @@ class ViewController: UIViewController {
         mainView.layer.cornerRadius = 10
         colorView.layer.cornerRadius = 10
         
-        redSlider.tintColor = .red
-        greenSlider.tintColor = .green
-        blueSlider.tintColor = .blue
-        
         colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value),
                                             green: CGFloat(greenSlider.value),
                                             blue: CGFloat(blueSlider.value),
                                             alpha: 1.0)
-//        colorView.backgroundColor = setColorForView(red: redSlider.value, green: greenSlider.value, blue: blueSlider.value)
     }
     
-    private func getRoundValueForLabel(for value: Float) -> String {
+    private func getRoundValueForLabel(from value: Float) -> String {
         let roundedValue = round(value * 100) / 100
         let result = String(roundedValue)
         return result
@@ -75,15 +76,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func redSliderOnChange() {
-        redSliderValueLabel.text = getRoundValueForLabel(for: redSlider.value)
+        redSliderValueLabel.text = getRoundValueForLabel(from: redSlider.value)
         setColorForView(red: redSlider.value, green: greenSlider.value, blue: blueSlider.value)
     }
     @IBAction func greenSliderOnChange() {
-        greenSliderValueLabel.text = getRoundValueForLabel(for: greenSlider.value)
+        greenSliderValueLabel.text = getRoundValueForLabel(from: greenSlider.value)
         setColorForView(red: redSlider.value, green: greenSlider.value, blue: blueSlider.value)
     }
     @IBAction func blueSliderOnChange() {
-        blueSliderValueLabel.text = getRoundValueForLabel(for: blueSlider.value)
+        blueSliderValueLabel.text = getRoundValueForLabel(from: blueSlider.value)
         setColorForView(red: redSlider.value, green: greenSlider.value, blue: blueSlider.value)
     }
     
