@@ -26,9 +26,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .black
+        mainView.backgroundColor = .systemGray2
+        
         redSlider.minimumValue = 0.1
         redSlider.maximumValue = 1.0
-        redSlider.value = 0.5
+        redSlider.value = 0.75
         redSlider.tintColor = .red
         
         greenSlider.minimumValue = 0.1
@@ -38,21 +41,17 @@ class ViewController: UIViewController {
         
         blueSlider.minimumValue = 0.1
         blueSlider.maximumValue = 1.0
-        blueSlider.value = 0.5
+        blueSlider.value = 0.25
         blueSlider.tintColor = .blue
         
         redLabel.text = "Red:"
-//        redLabel.adjustsFontSizeToFitWidth = true
         greenLabel.text = "Green:"
-//        greenLabel.adjustsFontSizeToFitWidth = true
         blueLabel.text = "Blue:"
-//        blueLabel.adjustsFontSizeToFitWidth = true
         
         redSliderValueLabel.text = String(redSlider.value)
         greenSliderValueLabel.text = String(greenSlider.value)
         blueSliderValueLabel.text = String(blueSlider.value)
         
-        view.backgroundColor = .black
         mainView.layer.cornerRadius = 10
         colorView.layer.cornerRadius = 10
         
@@ -67,7 +66,8 @@ class ViewController: UIViewController {
         let result = String(roundedValue)
         return result
     }
-    
+    //чтобы не переводить в CGFloat в каждо экшене
+    //мне кажется так короче и эффективнее
     private func setColorForView(red: Float, green: Float, blue: Float){
         let red = CGFloat(red)
         let green = CGFloat(green)
