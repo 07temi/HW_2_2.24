@@ -66,7 +66,7 @@ class ViewController: UIViewController {
         let result = String(roundedValue)
         return result
     }
-    //чтобы не переводить в CGFloat в каждо экшене
+    //чтобы не переводить в CGFloat в каждом экшене
     //мне кажется так короче и эффективнее
     private func setColorForView(red: Float, green: Float, blue: Float){
         let red = CGFloat(red)
