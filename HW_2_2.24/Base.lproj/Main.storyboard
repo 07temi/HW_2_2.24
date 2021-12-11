@@ -16,15 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VfJ-wd-Qvu">
-                                <rect key="frame" x="20" y="45" width="280" height="478"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VfJ-wd-Qvu">
+                                <rect key="frame" x="22" y="68" width="331" height="550"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uXG-jR-5Ql">
-                                        <rect key="frame" x="26" y="42" width="228" height="104"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2AJ-vI-WUY">
                                         <rect key="frame" x="8" y="191" width="42" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -88,12 +82,27 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uXG-jR-5Ql">
+                                        <rect key="frame" x="26" y="26" width="283" height="104"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VfJ-wd-Qvu" secondAttribute="height" multiplier="331:550" id="PKl-WA-P1j"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VfJ-wd-Qvu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="6RD-vB-le2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VfJ-wd-Qvu" secondAttribute="bottom" constant="49" id="HD8-X3-zNi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VfJ-wd-Qvu" secondAttribute="trailing" constant="22" id="My7-hd-wEA"/>
+                            <constraint firstItem="VfJ-wd-Qvu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u8a-on-QHW"/>
+                            <constraint firstItem="VfJ-wd-Qvu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="68" id="uhI-NC-S2i"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="blueLabel" destination="bha-xn-YGi" id="T2j-SZ-lPu"/>
