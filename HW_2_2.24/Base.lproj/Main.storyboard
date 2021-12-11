@@ -41,7 +41,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kJd-kW-oHk">
-                                        <rect key="frame" x="140" y="183" width="132" height="30"/>
+                                        <rect key="frame" x="140" y="183" width="132" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <action selector="redSliderOnChange" destination="BYZ-38-t0r" eventType="valueChanged" id="7Xp-9M-UED"/>
@@ -82,15 +82,19 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uXG-jR-5Ql">
-                                        <rect key="frame" x="26" y="26" width="283" height="104"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uXG-jR-5Ql">
+                                        <rect key="frame" x="25" y="25" width="281" height="104"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <constraints>
+                                    <constraint firstItem="uXG-jR-5Ql" firstAttribute="leading" secondItem="VfJ-wd-Qvu" secondAttribute="leading" constant="25" id="B4K-04-aau"/>
+                                    <constraint firstItem="uXG-jR-5Ql" firstAttribute="top" secondItem="VfJ-wd-Qvu" secondAttribute="top" constant="25" id="DVS-52-SI1"/>
                                     <constraint firstAttribute="width" secondItem="VfJ-wd-Qvu" secondAttribute="height" multiplier="331:550" id="PKl-WA-P1j"/>
+                                    <constraint firstAttribute="trailing" secondItem="uXG-jR-5Ql" secondAttribute="trailing" constant="25" id="Wfa-ZW-hPM"/>
+                                    <constraint firstItem="uXG-jR-5Ql" firstAttribute="centerX" secondItem="VfJ-wd-Qvu" secondAttribute="centerX" id="jh6-UM-0mF"/>
+                                    <constraint firstAttribute="bottom" secondItem="uXG-jR-5Ql" secondAttribute="bottom" constant="421" id="kfC-cX-C0J"/>
                                 </constraints>
                             </view>
                         </subviews>
